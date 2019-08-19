@@ -1,0 +1,123 @@
+@import "sidebar-and-main-panel";
+@import "charts";
+@import "rtl";
+@import "nucleo-icons";
+@import "./plugins/ngx-toastr";
+
+.lookup {
+    display: flex;
+
+    .card-chart {
+        overflow: inherit;
+    }
+
+    .row {
+        margin-right: 0;
+    }
+
+    &.top {
+        margin-top: 80px;
+    }
+}
+
+.lookup.content {
+    min-height: 10px;
+    padding-top: 0;
+}
+
+@media screen and (max-width: 770px) {
+    .lookup.content {
+        padding-left: 15px !important;
+    }
+}
+
+.lookup-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    h4 {
+        margin-bottom: 10px;
+        padding-left: 0;
+    }
+
+    .row {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 0;
+
+        .lookup-form {
+            width: 48%;
+            border-color: #8e5c5c;
+        }
+    }
+
+    .url {
+        flex-wrap: wrap;
+
+        p {
+            font-size: 10px;
+            background-color: #fd5c9321;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            height: 24px;
+            width: auto;
+            padding: 0 11px;
+            color: #fff;
+        }
+    }
+
+    .search-badge{
+        width: 40px;
+        height: 40px;
+        background-color: #fd5c93;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        position: absolute;
+        top: -17px;
+        left: 87%;
+        cursor: pointer;
+    }
+    
+}
+
+@-webkit-keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+  }

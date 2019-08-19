@@ -1,0 +1,55 @@
+
+<div class="content lookup top row">
+  <div class=" col-12">
+    <div class=" card card-chart">
+      <div class="lookup-container">
+        <h4>ACCOUNT LOOKUP</h4>
+        <div class="search-badge" (click)="handleSubmit($event)" *ngIf="firstUnText">
+            <i class=" tim-icons icon-zoom-split" *ngIf="!loading"> </i>
+            <i class=" tim-icons icon-refresh-02 rotating" *ngIf="loading"> </i>
+        </div>
+        <form>
+          <div class=" row">
+            <input class="lookup-form form-control" placeholder="@username1" type="text" (keyup)="firstUn($event)" />
+            <input class="lookup-form form-control" placeholder="@username2 (optional)" type="text" (keyup)="secondUn($event)" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content lookup row" *ngIf="results !== 'empty'">
+    <div class=" col-12">
+      <div class=" card card-chart">
+        <div class="lookup-container">
+          <div class="url row">
+            <h4>Results</h4>
+            <p>For: {{ results.url }}</p>
+          </div>
+          <div class="row">
+            <div class=" table-responsive">
+                <table class=" table tablesorter" id="">
+                  <thead class=" text-primary">
+                    <tr>
+                      <th>Followers</th>
+                      <th>Following</th>
+                      <th>Posts</th>
+                      <th>Test Data</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{{ results.followers }}</td>
+                      <td>{{ results.following }}</td>
+                      <td>{{ results.posts }}</td>
+                      <td>{{ results.test }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
